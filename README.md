@@ -1,32 +1,37 @@
-📘 Placement: Importance of Coding Round (Java Focus)
-📌 Overview
-The coding round is a vital step in technical placements. It evaluates your problem-solving skills, logic, and Java programming proficiency.
+# 📘 Placement: Importance of Coding Round (Java Focus)
 
-🧠 What It Tests
-Core Java concepts (OOPs, Collections, etc.)
+## 🚀 Overview
+The coding round is a critical stage in placement processes for tech roles. It evaluates a candidate’s ability to solve algorithmic problems using programming languages like **Java**.
 
-Data Structures & Algorithms
+## 🧠 What It Tests
+- Core Java concepts (OOP, Collections, Exception Handling)
+- Data Structures and Algorithms (DSA)
+- Problem-solving and logic
+- Code efficiency and optimization
 
-Time and space optimization
+## 💼 Why It Matters
+- Acts as the **first major elimination round**
+- Determines your **technical foundation**
+- Used by top recruiters: TCS, Infosys, Wipro, Accenture, etc.
+- A high score here boosts chances for interview calls
 
-Debugging and logical reasoning
+## 🛠️ Preparation Tips
+- Practice Java-based problems on platforms like:
+  - [LeetCode](https://leetcode.com)
+  - [HackerRank](https://hackerrank.com)
+  - [CodeChef](https://www.codechef.com)
+- Focus on:
+  - Arrays, Strings, Linked Lists, Trees, Graphs
+  - Recursion, DP, Greedy algorithms
+  - Java syntax, input/output handling
 
-🎯 Why It Matters
-✅ First major filter in most placement drives
-✅ Determines technical capability
-✅ Used by top companies (TCS, Infosys, Wipro, etc.)
-
-🛠️ How to Prepare
-Practice on platforms like HackerRank, LeetCode, CodeChef
-
-Master Java fundamentals and syntax
-
-Solve DSA problems daily
-
-Focus on speed + accuracy
-
-🚀 Tip
-Write clean, optimized Java code. Use proper class structures, and handle edge cases.
-
-📈 Outcome
-Strong coding skills in Java significantly improve your chances of placement success.
+## 📝 Sample Topics in Java
+```java
+// Sample: Reverse a String
+public class ReverseString {
+    public static void main(String[] args) {
+        String input = "placement";
+        StringBuilder sb = new StringBuilder(input);
+        System.out.println(sb.reverse().toString());
+    }
+}
