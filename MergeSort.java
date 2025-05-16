@@ -24,7 +24,7 @@ class MergeSort {
         }
 
         for (int i = 0; i < merge.length; i++) {
-            arr[si + i] = merge[i]; // ✅ Copy back to correct position
+            arr[si + i] = merge[i]; 
         }
     }
 
