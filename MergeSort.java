@@ -1,70 +1,72 @@
-import java.io.*;
+import java.util.Scanner;
 
 class MergeSort {
+    public static void conquer(int arr[], int si, int ei, int mid) {
+        int merge[] = new int[ei - si + 1];
+        int idx1 = si;
+        int idx2 = mid + 1;
+        int x = 0;
 
-    static void merge(int arr[], int l, int m, int r) {
-        int n1 = m - l + 1;
-        int n2 = r - m;
-
-        int L[] = new int[n1];
-        int R[] = new int[n2];
-
-        for (int i = 0; i < n1; ++i)
-            L[i] = arr[l + i];
-        for (int j = 0; j < n2; ++j)
-            R[j] = arr[m + 1 + j];
-
-        int i = 0, j = 0, k = l;
-        while (i < n1 && j < n2) {
-            if (L[i] <= R[j]) {
-                arr[k] = L[i];
-                i++;
+        while (idx1 <= mid && idx2 <= ei) {
+            if (arr[idx1] <= arr[idx2]) {
+                merge[x++] = arr[idx1++];
             } else {
-                arr[k] = R[j];
-                j++;
+                merge[x++] = arr[idx2++];
             }
-            k++;
         }
 
-        while (i < n1) {
-            arr[k] = L[i];
-            i++;
-            k++;
+        while (idx1 <= mid) {
+            merge[x++] = arr[idx1++];
         }
 
-        while (j < n2) {
-            arr[k] = R[j];
-            j++;
-            k++;
+        while (idx2 <= ei) {
+            merge[x++] = arr[idx2++];
         }
-    }
 
-    static void sort(int arr[], int l, int r) {
-        if (l < r) {
-            int m = l + (r - l) / 2;
-            sort(arr, l, m);
-            sort(arr, m + 1, r);
-            merge(arr, l, m, r);
+        for (int i = 0; i < merge.length; i++) {
+            arr[si + i] = merge[i]; // ✅ Copy back to correct position
         }
     }
 
-    static void printArray(int arr[]) {
-        int n = arr.length;
-        for (int i = 0; i < n; ++i)
+    public static void divide(int arr[], int si, int ei) {
+        if (si >= ei) {
+            return;
+        }
+
+        int mid = si + (ei - si) / 2;
+
+        divide(arr, si, mid);        // ✅ Left half
+        divide(arr, mid + 1, ei);    // ✅ Right half
+        conquer(arr, si, ei, mid);   // ✅ Merge step
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the size of the array: ");
+        int n = sc.nextInt();
+
+        if (n <= 0) {
+            System.out.println("Array size must be greater than 0.");
+            sc.close();
+            return;
+        }
+
+        int[] arr = new int[n];
+
+        System.out.println("Enter the elements of the array:");
+        for (int i = 0; i < n; i++) {
+            arr[i] = sc.nextInt();
+        }
+
+        divide(arr, 0, n - 1);
+
+        System.out.println("Sorted array:");
+        for (int i = 0; i < n; i++) {
             System.out.print(arr[i] + " ");
+        }
         System.out.println();
-    }
 
-    public static void main(String args[]) {
-        int arr[] = { 12, 11, 13, 5, 6, 7 };
-
-        System.out.println("Given array is");
-        printArray(arr);
-
-        sort(arr, 0, arr.length - 1);
-
-        System.out.println("\nSorted array is");
-        printArray(arr);
+        sc.close();
     }
 }
-// This code implements the Merge Sort algorithm in Java.
