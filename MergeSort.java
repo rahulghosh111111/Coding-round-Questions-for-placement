@@ -19,12 +19,12 @@ class MergeSort {
             merge[x++] = arr[idx1++];
         }
 
-        while (idx2 <= ei) {
+        while (idx2 <= ei) {    
             merge[x++] = arr[idx2++];
         }
 
         for (int i = 0; i < merge.length; i++) {
-            arr[si + i] = merge[i]; 
+            arr[si+i] = merge[i]; 
         }
     }
 
