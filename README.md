@@ -1,4 +1,4 @@
-# 📘 Placement: Importance of Coding Round (Java Focus)
+# 📘 Placement: Importance of Coding Round Problems and easy methods to solve those problems easily (Java Focus)
 
 ## 🚀 Overview
 The coding round is a critical stage in placement processes for tech roles. It evaluates a candidate’s ability to solve algorithmic problems using programming languages like **Java**.
