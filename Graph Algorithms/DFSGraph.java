@@ -4,7 +4,7 @@ public class DFSGraph {
 
     // Recursive DFS utility function
     private static void dfsRec(ArrayList<ArrayList<Integer>> adj,
-                               boolean[] visited, int s, ArrayList<Integer> res) {
+            boolean[] visited, int s, ArrayList<Integer> res) {
         visited[s] = true;
         res.add(s);
 
@@ -40,11 +40,11 @@ public class DFSGraph {
 
         // Edge list
         int[][] edges = {
-            {1, 2},
-            {1, 0},
-            {2, 0},
-            {2, 3},
-            {2, 4}
+                { 1, 2 },
+                { 1, 0 },
+                { 2, 0 },
+                { 2, 3 },
+                { 2, 4 }
         };
 
         // Add edges to graph
