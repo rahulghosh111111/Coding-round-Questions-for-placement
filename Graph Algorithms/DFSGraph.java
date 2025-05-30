@@ -5,12 +5,14 @@ public class DFSGraph {
     // Recursive DFS utility function
     private static void dfsRec(ArrayList<ArrayList<Integer>> adj,
             boolean[] visited, int s, ArrayList<Integer> res) {
+             //   1. mark vertex as visited
         visited[s] = true;
+        // 2. add vertex to result(List)
         res.add(s);
-
+  // 3. dfs on connection of s
         for (int i : adj.get(s)) {
             if (!visited[i]) {
-                dfsRec(adj, visited, i, res);
+                dfsRec(adj, visited, i, res); // call dfs on unvisited connection
             }
         }
     }
