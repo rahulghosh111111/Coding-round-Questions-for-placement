@@ -13,7 +13,7 @@ public class BreadthFirstSearch {
         }
     }
 
-    // Method to add an edge (undirected)   
+    // Method to add an edge (undirected)  
     public void addEdge(int u, int v) {
         graph.get(u).add(v);
         graph.get(v).add(u); // Remove this line if the graph is directed
