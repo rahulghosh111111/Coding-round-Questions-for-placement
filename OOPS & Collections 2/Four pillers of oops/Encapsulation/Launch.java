@@ -1,3 +1,5 @@
+package Encapsulation;
+// Encapsulation is the bundling of data with the methods that operate on that data.
 class Book{
     private int page_no;
     public void setData(int x){

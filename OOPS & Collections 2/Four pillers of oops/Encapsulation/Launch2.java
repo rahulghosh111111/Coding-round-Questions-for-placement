@@ -1,4 +1,6 @@
-class Dog {
+// Encapsulation is the process of wrapping data and code together as a single unit.
+package Encapsulation;
+ class Dog {
     private String breed; // here breed is instance variable
     private float age;
     private int price;
