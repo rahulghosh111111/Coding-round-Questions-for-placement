@@ -50,7 +50,7 @@ class monkey extends Animal {
 }
 
 class forest {
-    public void permit(Animal ref) {
+    public void permit(Animal ref) {     // permit method can accept any type of Animal object
         ref.eat();
         ref.sleep();
         ref.foodHabit();
