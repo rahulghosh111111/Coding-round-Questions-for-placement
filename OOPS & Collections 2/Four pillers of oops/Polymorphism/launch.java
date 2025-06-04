@@ -24,6 +24,8 @@ class Child3 extends Parent{
 }
 public class launch {
     public static void main(String[] args) {
+        Parent p = new Parent();
+        p.cry(); // Parent class method
        
         Child1 c1 = new Child1();
         Child2 c2 = new Child2();
