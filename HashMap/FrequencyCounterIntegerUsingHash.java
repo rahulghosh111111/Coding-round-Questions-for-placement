@@ -1,7 +1,7 @@
 package HashMap;
 import java.util.Scanner;
 
-public class FrequencyCounterUsingHash {
+public class FrequencyCounterIntegerUsingHash {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
