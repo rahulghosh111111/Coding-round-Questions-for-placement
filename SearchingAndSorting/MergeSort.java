@@ -35,9 +35,9 @@ class MergeSort {
 
         int mid = si + (ei - si) / 2;
 
-        divide(arr, si, mid);        // ✅ Left half
-        divide(arr, mid + 1, ei);    // ✅ Right half
-        conquer(arr, si, ei, mid);   // ✅ Merge step
+        divide(arr, si, mid);        // Left half
+        divide(arr, mid + 1, ei);    //  Right half
+        conquer(arr, si, ei, mid);   // Merge step
     }
 
     public static void main(String[] args) {
