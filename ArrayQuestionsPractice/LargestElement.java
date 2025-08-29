@@ -1,5 +1,4 @@
 package ArrayQuestionsPractice;
-
 import java.util.*;
 
 public class LargestElement {
