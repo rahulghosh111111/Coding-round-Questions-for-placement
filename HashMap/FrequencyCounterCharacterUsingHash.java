@@ -12,7 +12,6 @@ public class FrequencyCounterCharacterUsingHash {
         for (int i = 0; i < s.length(); i++) {
             hash[s.charAt(i)]++;
         }
-
         System.out.print("Enter number of queries: ");
         int q = sc.nextInt();
 
